@@ -1,0 +1,108 @@
+.menus {
+
+  .menu-item {
+    @include col(12);
+    margin-bottom: pxem(50);
+
+    @include mq($from: $breakpoint-xsmall) {
+      @include col(6);
+    }
+
+    @include mq($from: $breakpoint-small) {
+      @include col(4);
+    }
+
+    &-image {
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: pxem(250);
+      height: pxem(250);
+      background-size: cover;
+      margin-bottom: pxem(20);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-title {
+      @include josefin-semi;
+      font-size: pxem(20);
+      color: $color-dark-text;
+      height: pxem(50);
+    }
+
+    &-price {
+      @include josefin-bold;
+      font-size: pxem(16);
+      color: $color-dark-text;
+      margin-bottom: pxem(10);
+    }
+
+    &-rich-text {
+      h1,
+      h2, 
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 12px;
+        margin-top: 0;
+      }
+
+      h1 {
+        @include page-title;
+      }
+
+      h2 {
+        @include section-bold;
+
+      }
+
+      h3 {
+        @include semi-bold;
+      }
+
+      h4, 
+      h5, 
+      h6 {
+        @include text-large-bold;
+      }
+
+      p,
+      span {
+        @include text-paragraph;
+
+        a {
+          @include footer-links;
+        }
+      }
+
+      a {
+        @include footer-links;
+      }
+
+      strong {
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding: 0;
+
+        li {
+          @include text-paragraph;
+        }
+      }
+
+    }
+  }
+}

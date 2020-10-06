@@ -1,0 +1,85 @@
+.home {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: pxem(75) 0 pxem(70) 0;
+  text-align: center;
+  background-image: url('~assets/images/homepage-bg.jpg');
+
+  h1 {
+    @include home-title;
+    @include col(12);
+    margin-bottom: pxem(15);
+  }
+
+  .-sub {
+    @include home-sub;
+    @include col(12);
+
+    @include mq($from: $breakpoint-small) {
+      @include col(4);
+      @include offset(4);
+    }
+
+    div:first-of-type {
+      margin-bottom: pxem(5);
+    }
+  }
+
+  .-awards {
+    margin: pxem(40) 0;
+    justify-content: center;
+    // text-align: center;
+
+    .-award {
+      text-align: center;
+      display: inline-block;
+      width: 45%;
+      margin: 0 0 pxem(30) 0;
+
+      @include mq($to: $breakpoint-small) {
+        width: 100%;
+      }
+
+      .-title,
+      .-year {
+        @include award-bold;
+      }
+
+      .-name {
+        @include semi-bold;
+        margin: pxem(5) 0;
+      }
+    }
+  }
+
+  .-rich-text {
+    justify-content: center;
+    margin: pxem(30) 0;
+  }
+
+  .content {
+    width: 90%;
+    text-align: center;
+  }
+
+  p {
+    color: $color-white;
+    margin-bottom: pxem(17);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .button {
+    @include col(12);
+
+    @include mq($from: $breakpoint-small) {
+      @include col(4);
+      @include offset(4);
+    }
+  }
+
+
+}
