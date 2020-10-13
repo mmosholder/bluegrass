@@ -1,3 +1,8 @@
 .-map {
   @include col(12);
+  height: pxem(300);
+
+  .vue-map-container {
+    height: 100%;
+  }
 }
