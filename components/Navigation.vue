@@ -13,7 +13,7 @@
         </button>
         <div class="-links">
           <ul>
-            <nuxt-link tag="li" to="/"><a>Home</a></nuxt-link>
+            <!-- <nuxt-link tag="li" to="/"><a>Home</a></nuxt-link> -->
             <nuxt-link tag="li" v-for="(item, i) in navItems" :key="i" :to="`/${item.link.cached_url}`"><a>{{item.link_text}}</a></nuxt-link>
           </ul>
         </div>

@@ -6,7 +6,7 @@
           <h1>{{ blok.page_title }}</h1>
         </div>
       </div>
-      <div class="container">
+      <div class="container" v-if="$route.path !== '/candelas-menus'">
         <div class="-row">
           <div class="content">
             <div class="-text -center-align">
