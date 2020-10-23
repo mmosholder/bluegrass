@@ -65,10 +65,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
-  ],
+
   env: {
     MAPS_KEY: process.env.MAPS_KEY
   },
