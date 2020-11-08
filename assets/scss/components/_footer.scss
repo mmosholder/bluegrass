@@ -94,7 +94,11 @@
     }
 
     .-address {
-      margin-bottom: pxem(10);
+      margin-bottom: pxem(20);
+
+      &:last-of-type {
+        margin-bottom: pxem(10);
+      }
 
       span {
         display: block;

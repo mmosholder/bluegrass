@@ -44,13 +44,14 @@
   }
 
   .-links {
-    position: absolute;
-    top: -20px;
-    left: 100%;
+    position: fixed;
+    transform: translateX(100%);
+    z-index: -1;
+    transition: transform 240ms $t-1;
+    top: -8px;
     height: 101vh;
     width: 100vw;
-    z-index: -1;
-    transition: left 240ms $t-1;
+    transition: transform 240ms $t-1;
     background-color: $color-body-bg;
     padding-top: pxem(70);
 

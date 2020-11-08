@@ -6,12 +6,13 @@
           <img class="-logo" src="~assets/images/home-nav-logo.png" alt="">
           <img class="-wordmark" src="~assets/images/wordmark@2x.png" alt="">
         </a>
-        <button class="hamburger hamburger--slider" type="button">
+        <button @click="navOpen = !navOpen" :class="['hamburger hamburger--slider ' + computedIconClass]" type="button" id="navToggle"
+          aria-label="Menu" aria-controls="navigation" aria-expanded="false">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
-        <div class="-links">
+        <div :class="['-links' + computedNavClass]">
           <ul>
             <!-- <nuxt-link tag="li" to="/"><a>Home</a></nuxt-link> -->
             <nuxt-link tag="li" v-for="(item, i) in navItems" :key="i" :to="`/${item.link.cached_url}`"><a>{{item.link_text}}</a></nuxt-link>
@@ -28,12 +29,47 @@ import axios from 'axios';
 export default {
   data () {
     return {
-      navItems: null
+      navItems: null,
+      navOpen: false
     }
   },
 
   created() {
     this.getNavItems();
+  },
+
+  computed: {
+    computedIconClass() {
+        if (this.navOpen) {
+          if (window.outerWidth >= 768) {
+            return ' is-active'
+          }
+        } else {
+          return '';
+        }
+      },
+
+      computedNavClass() {
+        if (this.navOpen) {
+          return ' -open'
+        } else {
+          return '';
+        }
+      }
+  },
+
+  watch: {
+    navOpen() {
+        const body = document.getElementsByTagName('body');
+        const html = document.getElementsByTagName('html');
+
+        body[0].classList.toggle('-nav-open');
+        html[0].classList.toggle('-nav-open');
+      },
+
+      '$route' (to, from) {
+        this.navOpen = false;
+      }
   },
 
   methods: {

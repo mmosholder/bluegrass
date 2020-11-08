@@ -28,6 +28,12 @@
 						<span>Arvada, CO 80002</span>
 						<span>720-476-3950</span>
 					</div>
+          <div class="-address">
+						<span>The Bluegrass Candelas</span>
+						<span>18068 W 92nd Ln Unit 400</span>
+						<span>Arvada, CO 80007</span>
+						<span>720-536-8936</span>
+					</div>
 					<div class="-social">
             <a href="https://www.facebook.com/thebluegrasscoffeehouse/" target="_blank">
               <i class="fa fa-facebook"></i>

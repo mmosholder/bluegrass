@@ -16,6 +16,5 @@
 }
 
 .-links.-open {
-  left: 0;
-  transition: left 240ms $t-1;
+  transform: translateX(0%);
 }
