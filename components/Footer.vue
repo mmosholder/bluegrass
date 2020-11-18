@@ -13,13 +13,13 @@
               <nuxt-link tag="li" to="/"><a>Home</a></nuxt-link>
               <nuxt-link tag="li" v-for="(item, j) in navItems" :to="`/${item.link.cached_url}`" :key="j"><a>{{item.link_text}}</a></nuxt-link>
           </ul>
-          <ul class="links__secondary">
+          <!-- <ul class="links__secondary">
             <nuxt-link tag="li" to="/menus"><a>Coffee &amp; Tea</a></nuxt-link>
             <nuxt-link tag="li" to="/menus"><a>Breakfast &amp; Sunday Brunch</a></nuxt-link>
             <nuxt-link tag="li" to="/menus"><a></a>Lunch &amp; Dinner</nuxt-link>
             <nuxt-link tag="li" to="/menus"><a>Drinks</a></nuxt-link>
             <nuxt-link tag="li" to="/menus"><a>Happy Hour</a></nuxt-link>
-          </ul>
+          </ul> -->
         </div>
 				<div class="contact">
 					<div class="-address">
