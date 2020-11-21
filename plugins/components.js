@@ -13,6 +13,7 @@ import Hours from '@/components/Hours.vue'
 import TwoColumns from '@/components/TwoColumns.vue'
 import AwardsContainer from '@/components/AwardsContainer.vue'
 import LocationMap from '@/components/LocationMap.vue'
+import TitleText from '@/components/TitleText.vue'
 
 Vue.component('page', Page)
 Vue.component('rich_text', RichText)
@@ -28,3 +29,4 @@ Vue.component('hours', Hours)
 Vue.component('two_columns', TwoColumns)
 Vue.component('awards_container', AwardsContainer)
 Vue.component('location_map', LocationMap)
+Vue.component('title_text', TitleText)
