@@ -55,6 +55,20 @@
     }
   }
 
+  .two-columns {
+    text-align: center;
+
+    .-title,
+    .-content p {
+      color: $color-white;
+    }
+
+    .-content p {
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
   .-rich-text {
     justify-content: center;
     margin: pxem(30) 0;
