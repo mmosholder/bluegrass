@@ -15,6 +15,16 @@
           </div>
         </div>
       </div>
+      <div class="container" v-if="$route.path === '/candelas-menus'">
+        <div class="-row">
+          <div class="content">
+            <div class="-text -center-align">
+              <div class="menu-item-title text-center">Order via GrubHub!</div>
+              <div class="gh-button-ifrm" style="text-align: center;" data-customer-id="2525319" data-restaurant-name="The Bluegrass Coffee & Bourbon Lounge" data-button-color="#ff0000:#ffffff" data-button-size="large" data-env="prod" data-shortlinkurl="http://menus.fyi/2525319" data-restaurant-address="18148 W 92nd Ln, Arvada CO, 80007" data-version="1.0" data-link-type="gh" data-target="_self"></div><script src="http://gh-prod-restaurant-shortlinks.s3-website-us-east-1.amazonaws.com/libs/scripts/iframeLib.min.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="container">
       <div class="-row">

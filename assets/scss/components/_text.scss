@@ -1,3 +1,7 @@
 p {
   @include text-paragraph;
 }
+
+.text-center  {
+  text-align: center;
+}
