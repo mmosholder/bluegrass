@@ -22,5 +22,27 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
   }
+  &.-hollow {
+    @include general-bold($color-brand-red);
+    padding: pxem(22) 0 pxem(18) 0;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 2px solid $color-brand-red;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 240ms $t-1;
+    display: block;
+    width: 100%;
+
+    @include mq($from: $breakpoint-small) {
+      width: auto;
+      display: inline-block;
+      padding: pxem(22) pxem(35) pxem(18) pxem(35);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
 
 }
