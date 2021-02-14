@@ -5,8 +5,8 @@
           <div class="tabbed-content-container">
             <div class="menu-item" v-for="(menuItem, k) in tab.menu_items" :key="k">
               <div class="menu-item-title" v-if="menuItem.name">{{ menuItem.name }}</div>
-              <div class="menu-item-price" v-if="menuItem.price">{{ menuItem.price }}</div>
               <div class="menu-item-text menu-rich-text" v-if="menuItem.description" v-html="description(menuItem.description)"></div>
+              <div class="menu-item-price" v-if="menuItem.price">{{ menuItem.price }}</div>
             </div>
           </div>
         </div>

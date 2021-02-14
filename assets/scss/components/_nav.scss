@@ -7,9 +7,13 @@
   border-bottom: 2px solid $color-brand-red;
 
   @include mq($from: $breakpoint-medium) {
-    padding-top: pxem(80);
-    padding-bottom: pxem(30);
+    padding-top: 0;
+    padding-bottom: 0;
     border-bottom: 0;
+    position: sticky;
+    top: 0;
+    background: $color-body-bg;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);
   }
 
   .-row {
@@ -29,9 +33,10 @@
       width: pxem(95);
       height: auto;
       position: absolute;
-      top: -52px;
+      top: 0;
       left: 10px;
       z-index: 1;
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
     }
   }
 
@@ -81,9 +86,8 @@
     border-top: 2px solid $color-brand-red;
 
     @include mq($from: $breakpoint-medium) {
-      justify-content: space-around;
-      border-top: 2px solid $color-border;
-      border-bottom: 2px solid $color-border;
+      justify-content: flex-end;
+      border-top: none;
       flex-basis: auto;
       flex-direction: row;
       width: 98%;
@@ -96,14 +100,14 @@
     padding: 0 pxem(20);
 
     @include mq($from: $breakpoint-medium) {
-      padding: pxem(25) 0 pxem(15) 0;
+      padding: pxem(25) 0 pxem(10) 0;
       position: relative;
       display: inline-flex;
       margin: 0;
     }
 
     @include mq($from: $breakpoint-medium) {
-      padding: pxem(25) pxem(10) pxem(15) pxem(10);
+      padding: pxem(15) pxem(10) pxem(10) pxem(10);
     }
 
     &:after {

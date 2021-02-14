@@ -9,69 +9,39 @@
 
     @include mq($from: $breakpoint-small) {
       flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: pxem(20) 0 pxem(10) 0;
     }
 
     li {
-      @include text-large-bold;
+      @include josefin-semi;
+      line-height: 1;
       font-size: pxem(16);
       position: relative;
-      color: $text-dark;
-      transition: color 240ms $t-1;
-      padding: pxem(10);
+      color: $color-brand-red;
+      transition: color 240ms $t-1, background 240ms $t-1;
+      padding: 0 pxem(15);
       display: block;
-
-      &:after {
-        content: "";
-        position: absolute;
-        left: -5px;
-        bottom: 16px;
-        height: 10px;
-        width: 10px;
-        border-radius: 50%;
-        opacity: 0;
-        background-color: $color-brand-red;
-        transition: opacity 240ms $t-1;
-      }
+      cursor: pointer;
+      text-transform: uppercase;
+      border: 1px solid $color-brand-red;
+      background: rgba($color-brand-red, 0);
+      margin: 5px 20px;
+      min-width: 100px;
+      text-align: center;
+      height: pxem(45);
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover,
       &.active {
-        color: $color-brand-red;
+        background: rgba($color-brand-red, 1);
+        color: $color-white;
 
         &:after {
           opacity: 1;
-        }
-      }
-
-      @include mq($from: $breakpoint-small) {
-        padding: 0;
-        display: inline-flex;
-
-        &:after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          border-radius: 0;
-          height: 2px;
-          width: 100%;
-          opacity: 0;
-          background-color: $color-brand-red;
-          transition: opacity 240ms $t-1;
-        }
-
-        &:first-of-type {
-          padding-left: 0;
-        }
-
-        &:hover,
-        &.active {
-          color: lighten($text-dark, 10%);
-
-          &:after {
-            opacity: 1;
-          }
         }
       }
     }
