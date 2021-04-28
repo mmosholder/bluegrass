@@ -15,6 +15,8 @@ import AwardsContainer from '@/components/AwardsContainer.vue'
 import LocationMap from '@/components/LocationMap.vue'
 import TitleText from '@/components/TitleText.vue'
 import ImageText from '@/components/ImageText.vue'
+import EventPage from '@/components/Event.vue'
+import CalendarEmbed from '@/components/CalendarEmbed.vue'
 
 Vue.component('page', Page)
 Vue.component('rich_text', RichText)
@@ -32,3 +34,5 @@ Vue.component('awards_container', AwardsContainer)
 Vue.component('location_map', LocationMap)
 Vue.component('title_text', TitleText)
 Vue.component('image_text', ImageText)
+Vue.component('event_page', EventPage)
+Vue.component('calendar_embed', CalendarEmbed)
