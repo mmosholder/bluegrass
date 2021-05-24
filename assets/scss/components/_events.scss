@@ -15,3 +15,32 @@
         text-align: center;
     }
 }
+
+.calendar {
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+
+        a {
+            text-decoration: underline;
+            color: $color-brand-red;
+            font-size: 16px;
+            @include josefin-semi;
+
+            &:hover {
+                color: darken($color-brand-red, 10%);
+            }
+        }
+    }
+
+    &__embed {
+        width: 100%;
+        height: 600px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

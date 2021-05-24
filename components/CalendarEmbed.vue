@@ -7,6 +7,7 @@
             >View in Google Calendar</a
           >
         </div>
+        <div class="calendar__embed" v-html="blok.calendar_iframe"></div>
       </div>
     </div>
   </section>
